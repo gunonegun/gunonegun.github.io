@@ -34,7 +34,7 @@ div.card {
 }
 
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(/img/nightSky.jpg);/*https://papers.co/wallpaper/papers.co-nf71-starry-night-sky-mountain-nature-bw-dark-29-wallpaper.jpg*/
+  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(e_Portfolio/img/nightSky.jpg);/*https://papers.co/wallpaper/papers.co-nf71-starry-night-sky-mountain-nature-bw-dark-29-wallpaper.jpg*/
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
