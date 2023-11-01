@@ -117,7 +117,7 @@ h2 {
 
 /*Footer*/
 footer  {
-  background-image: url("/img/footer_background.png"); /* https://mannatresorts.com/footer-background/ */
+  background-image: url("../img/footer_background.png"); /* https://mannatresorts.com/footer-background/ */
   background-color: #000000;
   /* This is what makes the background image rescale based
   on the container's size */
