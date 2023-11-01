@@ -1,0 +1,126 @@
+body::before {
+  display: block;
+  content: '';
+  height: 60px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 90vh;
+  overflow: hidden;
+}
+
+
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#clock {
+  width: 100%;
+  position:absolute;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(61, 168, 195), 0 0 5px rgb(54, 171, 203);
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  50% {color: rgb(144, 210, 234);}
+}
+
+.navbar {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(/img/nightSky.jpg);/*https://papers.co/wallpaper/papers.co-nf71-starry-night-sky-mountain-nature-bw-dark-29-wallpaper.jpg*/
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* h2 text color*/
+h2 {
+  color:rgb(105, 180, 155);
+}
+
+/* Container Background Color*/
+.bgColor {
+  background-color: #F3EFE0;
+}
+
+/*Time line*/
+
+.timeline {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  font-family: "Fira Sans", sans-serif;
+  color: #130d0d;
+}
+
+.timeline__component {
+  margin: 0 20px 20px 20px;
+}
+
+.timeline__component--bg {
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* LEAVE TILL LAST */
+.timeline__component--bottom {
+  margin-bottom: 0;
+}
+
+.timeline__middle {
+  position: relative;
+  background: #101010;
+}
+
+.timeline__point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* LEAVE TILL LAST */
+.timeline__point--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline__date--right {
+  text-align: right;
+}
+
+.timeline__title {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.timeline__paragraph {
+  line-height: 1.5;
+}
+
+
+/*Footer*/
+footer  {
+  background-image: url("/img/footer_background.png"); /* https://mannatresorts.com/footer-background/ */
+  background-color: #000000;
+  /* This is what makes the background image rescale based
+  on the container's size */
+  background-size: cover;
+  filter: grayscale(100%);
+}

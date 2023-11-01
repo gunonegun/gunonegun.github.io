@@ -1,0 +1,343 @@
+<!doctype html>
+  <html lang="en">
+
+    <!--head-->
+
+    <head>
+      <link rel="stylesheet" href="/css/index.css">
+      <script src="/js/index.js" defer></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <title>CA2</title>
+    </head>
+
+    <!--body-->
+
+    <body onload="realTimeClock()" data-bs-spy="scroll" data-bs-target="#navbar-example">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark nav-pills flex-column flex-lg-row fixed-top p-2">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand"><h3>Hello!</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experience.html">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="career.html">Career</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+            </ul>
+            <form class="ms-auto d-flex ms-3">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-secondary ms-2" type="submit">go</button>
+            </form>
+            <div>
+              <a href="#" class="p-2">
+                <img src="/img/wa_icon.jpeg" alt="mdo" width="32" height="32" class="rounded-circle"><!--https://www.meme-arsenal.com/memes/b6a18f0ffd345b22cd219ef0e73ea5fe.jpg-->
+              </a>
+            </div>
+          </div>
+        </div> 
+      </nav>
+
+      <!--hero-->
+
+      <section id="home" class="min-vh-100 d-flex text-center align-items-center">
+        <div id="clock" data-aos="fade-down"></div>
+      </section>
+
+      <!--career interest-->
+
+        <section class="p-5">
+            <h2 class="display-1 text-center mb-5 fw-semibold" data-aos="fade-down">
+                Career Interests
+            </h2>
+            <hr class="mb-5">
+            <div class="d-flex justify-content-center align-items-center" data-aos="zoom-in">
+                <div class="text-center px-4" style="background-color: #65b8fe;">
+                    <h2 class="display-2 text-light">C</h2>
+                    <p class="fs-6 text-light">
+                        Conventional
+                    </p>
+                </div>
+                <div class="text-center px-4" style="background-color: #65b8fe;">
+                    <h2 class="display-2 text-light">I</h2>
+                    <p class="fs-6 text-light">
+                        Investigative
+                    </p>
+                </div>
+                <div class="text-center px-4" style="background-color: #65b8fe;">
+                    <h2 class="display-2 text-light">R</h2>
+                    <p class="fs-6 text-light">
+                        Realistic
+                    </p>
+                </div>
+            </div>
+            <div class="container border border-primary mt-5 p-5" style="width: 85%;" data-aos="flip-left">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(C) Conventional</b><br>Make things and places neat and orderly
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(C) Conventional</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-primary">
+                        <br><h4>80</h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(I) Investigative</b><br>Work with your mind to learn something or solve a challenging problem
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(I) Investigative</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-info">
+                        <br><h4>50</h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(R) Realistic</b><br>Work with your hands to make or fix something or perform some activity
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(R) Realistic</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-info">
+                        <br><h4>40</h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(A) Artistic</b><br>Create something beautiful or observe artistic things that others have done
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(A) Artistic</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" style="width: 37%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-info">
+                        <br><h4>37</h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(E) Enterprising</b><br>Lead or convince other people to do something
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(E) Enterprising</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-info">
+                        <br><h4>30</h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <b>(S) Social</b><br>Work with your hands to make or fix something or perform some activity
+                    </div>
+                    <div class="col-10 col-lg-5 col-md-5">
+                        <b>(S) Social</b>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center text-danger">
+                        <br><h4>25</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--career aspects-->
+     
+        <section class="p-5" style="background-color: #F3EFE0;">
+            <h2 class="display-1 text-center mb-5 fw-semibold" data-aos="fade-down">
+                Career Aspects
+            </h2>
+            <hr class="py-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+                <div class="col" data-aos="zoom-in-right">
+                    <div class="card">
+                        <img src="/img/career1.jpeg" class="card-img-top img-fluid" alt="..."><!--https://www.dreamstime.com/cyber-security-data-protection-business-technology-privacy-concept-awareness-image222835110-->
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Security Analyst</h5>
+                            <p class="card-text">
+                                <b>Cybersecurity analyst</b> protects an organization from cyberthreats and
+                                actively develops protocols used to
+                                respond to and quell cyberattacks.
+                                Cybersecurity analysts protect
+                                organisational infrastructure, such
+                                as computer networks and hardware
+                                devices, from cybercriminals and
+                                hackers seeking to cause damage or
+                                steal sensitive information.<br><br>
+                                <b>Field Of Study:</b>
+                                Computer Science (Including
+                                Programming, Networking),
+                                Software Engineering , Infocomm
+                                Security Management (Including
+                                Network Security)
+                            </p>
+                            <a href="https://www.myskillsfuture.gov.sg/content/portal/en/industry-insights/industry-detail/occupation-listing/occupation-detail.Cyber-Security-Analyst-43248.html" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up">
+                    <div class="card">
+                        <img src="/img/career2.webp" class="card-img-top img-fluid" alt="..."><!--https://www.acfcs.org/wp-content/uploads/2019/08/Cybersecurity-Resources.jpg-->
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Security Manager</h5>
+                            <p class="card-text">
+                                <b>Cybersecurity managers</b> monitor
+                                the channels through which
+                                information flows into and out of an
+                                organization’s information network.
+                                They are responsible for observing
+                                all of the operations occurring
+                                across the network and managing
+                                the infrastructure that facilitates
+                                those operations. This means
+                                implementing software upgrades
+                                when necessary and performing
+                                maintenance and upkeep on
+                                computer hardware systems.<br><br>
+                                <b>Field Of Study:</b>
+                                Computer Science (Including
+                                Programming, Networking),
+                                Information Systems (Including
+                                Mis, System Design), Infocomm
+                                Security Management (Including
+                                Network Security)
+                            </p>
+                            <a href="https://www.myskillsfuture.gov.sg/content/portal/en/industry-insights/industry-detail/occupation-listing/occupation-detail.Cyber-Security-Manager-43249.html" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="zoom-in-left">
+                    <div class="card">
+                        <img src="/img/career3.jpeg" class="card-img-top img-fluid" alt="..."><!--https://universidadeshoy.com.ar/uploads/noticias/5/2021/09/20210902164408_web-gestioncalidad-1.jpg-->
+                        <div class="card-body">
+                            <h5 class="card-title">Systems Analyst</h5>
+                            <p class="card-text">
+                                <b>Computer systems analysts</b>, or
+                                system architects, work with
+                                companies, institutions, and
+                                independent clients. They survey
+                                and diagnose database program
+                                issues, resolve user issues, and
+                                advise management about systems
+                                innovations to improve productivity.
+                                Whether formally associated with
+                                corporations or acting as freelance,
+                                systems analysts work with program
+                                users and platforms to gauge issues.
+                                This role requires communication and
+                                interpersonal skills, plus an understanding
+                                of standard and new technologies.<br><br>
+                                <b>Field Of Study:</b>
+                                Computer Science (Including
+                                Programming, Networking) , Information
+                                Systems (Including Mis, System Design)
+                            </p>
+                            <a href="https://www.myskillsfuture.gov.sg/content/portal/en/industry-insights/industry-detail/occupation-listing/occupation-detail.Systems-Analyst-15132.html" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5">
+        </section>
+
+        <!--plans-->
+
+        <section class="bgColor">
+            <h2 class="display-1 text-center py-3 fw-semibold" data-aos="fade-down">
+                Plans
+            </h2>
+            <div class="timeline">
+                <div class="timeline__component">
+                  <div class="timeline__date timeline__date--right">2024</div>
+                </div>
+                <div class="timeline__middle">
+                  <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bg" data-aos="zoom-in-left">
+                  <h2 class="timeline__title">Internship in Ubisoft</h2>
+                  <img class="img-fluid mt-3" src="/img/timeline1.jpeg" alt=""><!--https://www.nyp.edu.sg/schools/sdm/full-time-courses/animation-games-visual-effects.html-->
+                </div>
+                <div class="timeline__component timeline__component--bg" data-aos="zoom-in-right">
+                  <h2 class="timeline__title">Graduation</h2>
+                  <img class="img-fluid mt-3" src="/img/timeline2.jpg" alt=""><!--https://www.acstechnologies.com/church-growth/10-easy-and-meaningful-ways-to-honor-your-graduates/-->
+                </div>
+                <div class="timeline__middle">
+                  <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component">
+                  <div class="timeline__date">May 2025</div>
+                </div>
+                <div class="timeline__component">
+                  <div class="timeline__date timeline__date--right">September 2025</div>
+                </div>
+                <div class="timeline__middle">
+                  <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bg" data-aos="zoom-in-left">
+                    <h2 class="timeline__title">National Service</h2>
+                    <img class="img-fluid mt-3" src="/img/timeline3.png" alt=""><!--https://www.mindef.gov.sg/web/portal/mindef/national-service/discover-ns-->
+                </div>
+                <div class="timeline__component timeline__component--bottom timeline__component--bg" data-aos="zoom-in-right">
+                    <h2 class="timeline__title">Enter Working Life</h2>
+                    <img class="img-fluid mt-3" src="/img/timeline4.jpeg" alt=""><!--https://hrmcdn-13a1c.kxcdn.com/images/hr-sg/content-images/priya-june-2020-patrick-tay-work-from-home-lead-istock.jpg-->
+                </div>
+                <div class="timeline__middle">
+                  <div class="timeline__point"></div>
+                  <div class="timeline__point timeline__point--bottom"></div>
+                </div>
+                <div class="timeline__component timeline__component--bottom">
+                  <div class="timeline__date">2027</div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+
+        <footer class="p-5 text-center text-white">
+            <a href="#"><i class="text-white bi bi-telephone m-2"></i></a>
+            <a href="#"><i class="text-white bi bi-envelope m-2"></i></a>
+            <a href="#"><i class="text-white bi bi-facebook m-2"></i></a>
+            <i class="text-white bi bi-c-circle"></i>
+            <p><i class="bi bi-person m-3"></i>LIN AOFAN</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+            duration: 3000
+            });
+        </script>
+    </body>
+  </html>

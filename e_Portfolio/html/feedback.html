@@ -1,0 +1,144 @@
+<!doctype html>
+  <html lang="en">
+
+    <!--head-->
+
+    <head>
+      <link rel="stylesheet" href="/css/index.css">
+      <script src="/js/index.js" defer></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <title>CA2</title>
+    </head>
+
+    <!--body-->
+
+    <body onload="realTimeClock()" data-bs-spy="scroll" data-bs-target="#navbar-example">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark nav-pills flex-column flex-lg-row fixed-top p-2">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand"><h3>Hello!</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experience.html">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="career.html">Career</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+            </ul>
+            <form class="ms-auto d-flex ms-3">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-secondary ms-2" type="submit">go</button>
+            </form>
+            <div>
+              <a href="#" class="p-2">
+                <img src="/img/wa_icon.jpeg" alt="mdo" width="32" height="32" class="rounded-circle"><!--https://www.meme-arsenal.com/memes/b6a18f0ffd345b22cd219ef0e73ea5fe.jpg-->
+              </a>
+            </div>
+          </div>
+        </div> 
+      </nav>
+
+      <!--hero-->
+
+      <section id="home" class="min-vh-100 d-flex text-center align-items-center">
+        <div id="clock" data-aos="fade-down"></div>
+      </section>
+
+      <!--feedback-->
+
+      <section class="p-5">
+        <h2 class="display-1 text-center fw-semibold mb-5" style="color:rgb(105, 180, 155);" data-aos="fade-down">
+          Feedback
+        </h2>
+        <div class="container" data-aos="zoom-in">
+        <hr class="py-3">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="namE" class="form-label">Name</label>
+              <input type="email" class="form-control" id="namE">
+            </div>
+            <div class="col-md-4">
+              <label for="aNumber" class="form-label">Admission Number</label>
+              <input type="text" class="form-control" id="aNumber">
+            </div>
+            <div class="col-md-2">
+              <label for="aSchool" class="form-label">School</label>
+              <select id="aSchool" class="form-select">
+                <option>ABE</option>
+                <option>SB</option>
+                <option>CLS</option>
+                <option>SoC</option>
+                <option>EEE</option>
+                <option>LSC</option>
+                <option>MAD</option>
+                <option>MAE</option>
+                <option>MS</option>
+                <option>PACE</option>
+                <option>SMA</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Comment (s)</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <h3>Rate my website!</h3>
+            
+            <i class="col-4 bi bi-emoji-frown"></i>
+            <i class="col-4 bi bi-emoji-expressionless"></i>
+            <i class="col-4 bi bi-emoji-smile"></i>
+
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  value="option1">
+              <label class="form-check-label" for="inlineRadio1">1 (Poor)</label>
+            </div>
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+              <label class="form-check-label" for="inlineRadio3">3 (Good)</label>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+          </form>
+        </div>
+      
+      </section>
+
+      <!--footer-->
+
+      <footer class="p-5 text-center text-white">
+        <a href="#"><i class="text-white bi bi-telephone m-2"></i></a>
+        <a href="#"><i class="text-white bi bi-envelope m-2"></i></a>
+        <a href="#"><i class="text-white bi bi-facebook m-2"></i></a>
+        <i class="text-white bi bi-c-circle"></i>
+        <p><i class="bi bi-person m-3"></i>LIN AOFAN</p>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 3000
+        });
+      </script>
+    </body>
+  </html>
