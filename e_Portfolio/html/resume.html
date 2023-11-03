@@ -38,5 +38,19 @@
    <footer class="p-5 text-center text-white">
         <p><i class="text-white bi bi-envelope m-3"></i>aofan.22@ichat.sp.edu.sg</p>
       </footer>
+    <script>
+  // Get the current page URL
+  var currentPage = window.location.pathname;
+
+  // Highlight the active link
+  if (currentPage.includes("index")) {
+    document.getElementById("about-me-link").classList.add("active");
+  } else if (currentPage.includes("career")) {
+    document.getElementById("career-link").classList.add("active");
+  } else if (currentPage.includes("resume")) {
+    document.getElementById("resume-link").classList.add("active");
+  }
+</script>
+
 </body>
 </html>
