@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Projects</title>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar content into the placeholder
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel-buttons {
+            display: none;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-container:hover .carousel-buttons {
+            display: flex;
+            left: 0;
+            right: 0;
+        }
+
+        .carousel-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+        .description {
+            width: 50%;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <h1>My Projects</h1>
+
+        <!-- Project 1 -->
+        <div class="project" id="project1">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="../img/ADES_Project1.png" alt="Project 1 - Image 1" class="active">
+                    <img src="../img/ADES_Project2.png" alt="Project 1 - Image 2">
+                    <img src="../img/ADES_Project3.png" alt="Project 1 - Image 3">
+                    <img src="../img/ADES_Project4.png" alt="Project 1 - Image 4">
+                    <img src="../img/ADES_Project5.png" alt="Project 1 - Image 5">
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="prevImage('project1')"><i class="bi bi-arrow-left"></i></button>
+                    <button onclick="nextImage('project1')"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="description">
+                <h2>E-commerce website</h2>
+                <a href="https://ades-ca-frontend.onrender.com/" target="_blank">Live Website On
+                    Render</a>
+                <p>This e-commerce website is built using Node.js and Express for the backend, while React forms the
+                    frontend
+                    foundation. The project is shared and collaborated on GitHub</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Date Selection & Visualisation:</strong> Integrates @mui/x-date-pickers for date
+                        selection and recharts
+                        for data visualisation.</li>
+                    <li><strong>Efficient Date Manipulation:</strong> Employs dayjs for efficient date manipulation and
+                        formatting.</li>
+                    <li><strong>State Management & Data Fetching:</strong> Implements state management and asynchronous
+                        data fetching from the PostgreSQL database using hooks like useState and useEffect. The backend
+                        connects to PostgreSQL using pg and to Cloudinary for image management.</li>
+                    <li><strong>Icon Rendering:</strong> Utilises FontAwesomeIcon from
+                        "@fortawesome/react-fontawesome" for icon rendering, providing visual cues for actions such as
+                        deleting items from the cart.</li>
+                    <li><strong>Development Scaffolding:</strong> The project is scaffolded with Vite for fast and
+                        efficient
+                        development.</li>
+                    <li><strong>User Notifications:</strong> Utilises "react-hot-toast" for displaying notification
+                        messages to users,
+                        enhancing the overall user experience.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project" id="project2">
+            <div class="description">
+                <h2>Recipe Mobile Application</h2>
+                <p>This Android mobile application is developed using Android Studio.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Fragments & Intents:</strong> Utilises fragments for a dynamic and flexible UI, enabling
+                        users to
+                        navigate between different sections of the app smoothly.</li>
+                    <li><strong>Firebase Integration:</strong> Firebase Firestore serves as the backend database,
+                        allowing for real-time
+                        data fetching and updates. Users can add, retrieve, and display recipe data efficiently.</li>
+                    <li><strong>RecyclerView & NestedRecyclerView:</strong> Implements RecyclerView and
+                        NestedRecyclerView for
+                        displaying lists of recipes in a nested manner, providing an organized and hierarchical view of
+                        data.</li>
+                    <li><strong>ViewPager2:</strong> Incorporates ViewPager2 for swipeable screens, enhancing the user
+                        experience by
+                        allowing smooth transitions between different sections of the app.</li>
+                    <li><strong>MVC Architecture:</strong> Follows the Model-View-Controller (MVC) architecture,
+                        ensuring a clear
+                        separation of concerns and promoting maintainability and testability of the codebase. Adapters,
+                        models, and view
+                        classes are utilized to manage data and UI components effectively.</li>
+                </ul>
+
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="../img/ANDE_Project1.png" alt="Project 1 - Image 1" class="active">
+                    <img src="../img/ANDE_Project2.png" alt="Project 1 - Image 2">
+                    <img src="../img/ANDE_Project3.png" alt="Project 1 - Image 3">
+                    <img src="../img/ANDE_Project4.png" alt="Project 1 - Image 4">
+                    <img src="../img/ANDE_Project5.png" alt="Project 1 - Image 5">
+                    <img src="../img/ANDE_Project6.png" alt="Project 1 - Image 6">
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="prevImage('project2')"><i class="bi bi-arrow-left"></i></button>
+                    <button onclick="nextImage('project2')"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project" id="project3">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="../img/DENG_Project1.jpeg" alt="Project 3 - Image 1" class="active">
+                    <img src="../img/DENG_Project2.png" alt="Project 3 - Image 2">
+                    <img src="../img/DENG_Project3.png" alt="Project 3 - Image 3">
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="prevImage('project3')"><i class="bi bi-arrow-left"></i></button>
+                    <button onclick="nextImage('project3')"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Data Engineering Project</h2>
+                <p>This project designs and implements a data warehouse system to analyse sales data and answer business
+                    questions.</p>
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><b>Star schema</b>: A star schema is designed and created in the data warehouse to efficiently
+                        answer
+                        sales-related queries.
+                    </li>
+                    <li><b>OLTP database</b>: An OLTP (Online Transaction Processing) database is set up in Microsoft
+                        SQL Server to
+                        store raw sales transaction data.</li>
+                    <li><b>Data warehouse</b>: The data warehouse is created to store aggregated and transformed sales
+                        data from the
+                        OLTP database.</li>
+                    <li><b>Business queries</b>: Meaningful SQL queries are written to extract insights from the data
+                        warehouse,
+                        addressing various business questions about sales.</li>
+                    <li><b>MongoDB</b>: A MongoDB database is created for storing and analysing stock data, involving
+                        the creation of collections and queries.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="p-5 text-center text-white">
+        <p><i class="text-white bi bi-envelope m-3"></i>aofan.22@ichat.sp.edu.sg</p>
+    </footer>
+
+    <script>
+        function showImage(projectId, index) {
+            const images = document.querySelectorAll(`#${projectId} .carousel img`);
+            images.forEach((img, idx) => {
+                img.classList.toggle('active', idx === index);
+            });
+        }
+
+        function prevImage(projectId) {
+            const images = document.querySelectorAll(`#${projectId} .carousel img`);
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            const newIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(projectId, newIndex);
+        }
+
+        function nextImage(projectId) {
+            const images = document.querySelectorAll(`#${projectId} .carousel img`);
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            const newIndex = (currentIndex + 1) % images.length;
+            showImage(projectId, newIndex);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
+    <script>
+        // Get the current page URL
+        var currentPage = window.location.pathname;
+
+        // Highlight the active link
+        if (currentPage.includes("index")) {
+            document.getElementById("about-me-link").classList.add("active");
+        } else if (currentPage.includes("career")) {
+            document.getElementById("career-link").classList.add("active");
+        } else if (currentPage.includes("projects")) {
+            document.getElementById("projects-link").classList.add("active");
+        } else if (currentPage.includes("resume")) {
+            document.getElementById("resume-link").classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

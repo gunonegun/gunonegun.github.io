@@ -18,7 +18,7 @@ div.card {
 
 #hero_Text {
   width: 100%;
-  position:absolute;
+  position: absolute;
   font-size: 50px;
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(61, 168, 195), 0 0 5px rgb(54, 171, 203);
@@ -26,7 +26,9 @@ div.card {
 }
 
 @keyframes mymove {
-  50% {color: rgb(144, 210, 234);}
+  50% {
+    color: rgb(144, 210, 234);
+  }
 }
 
 .navbar {
@@ -34,15 +36,17 @@ div.card {
 }
 
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(../img/nightSky.jpg);/*https://papers.co/wallpaper/papers.co-nf71-starry-night-sky-mountain-nature-bw-dark-29-wallpaper.jpg*/
+  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(../img/nightSky.jpg);
+  /*https://papers.co/wallpaper/papers.co-nf71-starry-night-sky-mountain-nature-bw-dark-29-wallpaper.jpg*/
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 /* h2 text color*/
+h1,
 h2 {
-  color:rgb(105, 180, 155);
+  color: rgb(105, 180, 155);
 }
 
 /* Container Background Color*/
@@ -116,8 +120,9 @@ h2 {
 
 
 /*Footer*/
-footer  {
-  background-image: url("../img/footer_background.png"); /* https://mannatresorts.com/footer-background/ */
+footer {
+  background-image: url("../img/footer_background.png");
+  /* https://mannatresorts.com/footer-background/ */
   background-color: #000000;
   /* This is what makes the background image rescale based
   on the container's size */
