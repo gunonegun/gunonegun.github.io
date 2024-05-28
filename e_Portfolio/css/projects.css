@@ -32,7 +32,8 @@
       opacity: .25;
   }
 
-  .carousel-container {
+  .carousel-container,
+  .pdf-container {
       position: relative;
       width: 50%;
       padding: 20px;
@@ -44,6 +45,13 @@
       object-fit: contain;
       border-radius: 10px;
       display: none;
+  }
+
+  iframe {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      border-radius: 10px;
   }
 
   .carousel img.active {
@@ -93,7 +101,8 @@
           align-items: center;
       }
 
-      #project2 {
+      #project2,
+      #project4 {
           flex-direction: column-reverse !important;
       }
 
@@ -102,7 +111,8 @@
       }
 
       .carousel-container,
-      .description {
+      .description,
+      .pdf-container {
           width: 100%;
       }
   }
