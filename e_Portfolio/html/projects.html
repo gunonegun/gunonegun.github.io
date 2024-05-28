@@ -54,6 +54,13 @@
                     <img src="../img/ADES_Project4.png" alt="Project 1 - Image 4">
                     <img src="../img/ADES_Project5.png" alt="Project 1 - Image 5">
                 </div>
+                <div class="carousel-indicators">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
                 <div class="carousel-buttons">
                     <button onclick="prevImage('project1')"><i class="bi bi-arrow-left"></i></button>
                     <button onclick="nextImage('project1')"><i class="bi bi-arrow-right"></i></button>
@@ -133,6 +140,14 @@
                     <img src="../img/ANDE_Project5.png" alt="Project 1 - Image 5">
                     <img src="../img/ANDE_Project6.png" alt="Project 1 - Image 6">
                 </div>
+                <div class="carousel-indicators">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
                 <div class="carousel-buttons">
                     <button onclick="prevImage('project2')"><i class="bi bi-arrow-left"></i></button>
                     <button onclick="nextImage('project2')"><i class="bi bi-arrow-right"></i></button>
@@ -147,6 +162,11 @@
                     <img src="../img/DENG_Project1.jpeg" alt="Project 3 - Image 1" class="active">
                     <img src="../img/DENG_Project2.png" alt="Project 3 - Image 2">
                     <img src="../img/DENG_Project3.png" alt="Project 3 - Image 3">
+                </div>
+                <div class="carousel-indicators">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
                 <div class="carousel-buttons">
                     <button onclick="prevImage('project3')"><i class="bi bi-arrow-left"></i></button>
@@ -260,6 +280,19 @@
         } else if (currentPage.includes("resume")) {
             document.getElementById("resume-link").classList.add("active");
         }
+        function showImage(projectId, index) {
+            const images = document.querySelectorAll(`#${projectId} .carousel img`);
+            images.forEach((img, idx) => {
+                img.classList.toggle('active', idx === index);
+            });
+
+            // Update the active indicator dot
+            const dots = document.querySelectorAll(`#${projectId} .carousel-indicators .dot`);
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === index);
+            });
+        }
+
     </script>
 </body>
 
